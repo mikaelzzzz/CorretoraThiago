@@ -1,0 +1,44 @@
+# ───── arquivos de configuração / ambiente ─────
+.env
+*.env
+# Arquivos com tokens / segredos extras
+*.token
+*.secret
+
+# ───── virtual-envs ─────
+venv/
+.venv/
+ENV/
+env/
+
+# ───── cache / compilados ─────
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# ───── logs e relatórios ─────
+*.log
+*.csv
+*.sqlite3
+*.db
+
+# ───── artefatos de OCR / PDFs de teste ─────
+*.pdf
+*.png
+*.jpg
+*.jpeg
+tmp/
+tmp_ocr/
+
+# ───── IDEs ─────
+.vscode/
+.idea/
+*.sw?
+.DS_Store
+Thumbs.db
+
+# ───── distribuição / build ─────
+dist/
+build/
+*.egg-info/
