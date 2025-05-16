@@ -69,12 +69,21 @@ def ocr_text(pdf: bytes) -> str:
             text += pytesseract.image_to_string(img, lang="por")
     return text
 
-def first(rgx: str, txt: str, n: int = 1):
-    it = re.finditer(rgx, txt, re.I | re.S)
-    for _ in range(n - 1):
-        next(it, None)
-    m = next(it, None)
-    return (m.group(1).strip() if m else "")
+def first(rgx: str, txt: str, n: int = 1) -> str:
+    """
+    Retorna o n-ésimo match; se o padrão possui grupos de captura,
+    devolve o primeiro grupo; caso contrário devolve o match completo.
+    Nunca lança exceção.
+    """
+    flags = re.I | re.S
+    for i, m in enumerate(re.finditer(rgx, txt, flags), start=1):
+        if i == n:
+            try:
+                return (m.group(1) or "").strip()     # se grupo existir
+            except IndexError:
+                return m.group(0).strip()             # caso não exista
+    return ""
+
 
 def normalize(val: str, table: dict) -> str:
     lv = val.lower()
