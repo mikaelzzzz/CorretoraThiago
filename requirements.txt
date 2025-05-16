@@ -6,4 +6,4 @@ pytesseract
 pdf2image
 notion-client
 python-dotenv
-openai
+openai==0.28.1
