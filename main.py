@@ -43,8 +43,13 @@ SEGURADORAS = {
 }
 TIPOS = {
     "auto": "Automóvel", "automóvel": "Automóvel", "automovel": "Automóvel",
-    "vida": "Seguro de Vida", "residencial": "Residencial",
-    "empresa": "Empresa", "saúde": "Saúde"
+    "vida": "Seguro de Vida", "seguro de vida": "Seguro de Vida",
+    "empresa": "Empresa",
+    "saude": "Saude", "saúde": "Saude",
+    "residencial": "Residencial",
+    "bike": "Bicicleta", "bicicleta": "Bicicleta",
+    "celular": "Celular",
+    "notebook": "Notebook"
 }
 
 # ─────────────────── utils OCR / REGEX / HELPERS ──────────────
